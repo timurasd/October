@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>October – Агентство</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/styles.css">
+  <script>
+    $('#show-form').click(function () {
+      if (!$(this).hasClass('open')) {
+        $('.center-pop-up').css('display','block')
+        $(this).addClass('open');
+        $(this).text('CLOSE FORM');
+      }
+      else {
+        $('.center-pop-up').css('display','none')
+        $(this).removeClass('open');
+        $(this).text('OPEN FORM');
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="form-popup" id="myForm">
+    <div class="container">
+      <div class="center-popup">
+
+        <button type="button" class="cancel-button" onclick="closeForm()">x</button>
+        <div class="row">
+          <div class="col-md-5">
+            <h1>October</h1>
+            <div>ПРОЕКТНОЕ БЮРО</div>
+            <div>ПОЛНОГО ЦИКЛА</div><br><br>
+
+            <div>8 (915) 383-61-48</div>
+            <div>hello@october.ai</div><br><br>
+
+            <div>2015. Москва</div>
+          </div>
+          <div class="col-md-7">
+            <form  action="//formspree.io/you@email.com">
+              <p><input type="text" name="Имя" required placeholder="Имя" /></p>
+              <p><input type="email" name="_replyto"required placeholder="Email" /></p>
+              <p><textarea name="Сообщение" required placeholder="Ваше сообщение" rows="7"></textarea></p>
+              <p><input type="submit" value="Отправить" />
+              <input type="hidden" name="_next" value="/thanks.html" />
+              <input type="hidden" name="_subject" value="Сообщение с моего сайта" />
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div style="transform: translate(0, 50%);">
+      <div id="header">
+        <h1><b>October</b></h1>
+      </div>
+      <div id="body">
+
+        <div class="row">
+          <ul>
+            <li><i class="minus-icon icon-minus">&#xe800;</i> Маркетинг</li>
+            <li><i class="minus-icon icon-minus">&#xe800;</i> Разработка моб. приложений</li>
+            <li><i class="minus-icon icon-minus">&#xe800;</i> Research & Development</li>
+          </ul>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+              Пока готовим перезапуск сайта, мы продолжаем заниматься дизайном и маркетингом,
+              разрабатывать мобильные приложение и скоро откроем занавес с ногово R&D отдела.
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <button class="button-share open-button" onclick="openForm()">Напишите нам</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div id="footer" class="d-flex justify-content-between">
+<!--      d-flex justify-content-center-->
+
+      <div class="row">
+        <div>hello@october.ai</div>
+      </div>
+      <div class="row">
+        <div>2015-2019 &copy Москва</div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+  </script>
+</body>
+</html>
+
