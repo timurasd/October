@@ -1,5 +1,5 @@
 html, body {
-  font-size: 16px;
+  font-size: 19px;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   margin: 0;
@@ -8,8 +8,11 @@ html, body {
 }
 body {
   font-family: 'Montserrat', Helvetica, sans-serif;
-  background: #161614;
-  line-height: 20px;
+  background-color: #161614;
+  background-image: url('desktop.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #fff;
 }
 
@@ -21,8 +24,7 @@ body {
   padding: 10px;
 }
 #body {
-  padding: 10px;
-  padding-bottom: 60px;
+  padding: 10px 10px 60px 10px;
 }
 #footer {
   position:absolute;
@@ -32,17 +34,20 @@ body {
 }
 
 h1 {
-  color: #EE6723;
+  color: #FDA458;
 }
 ul {
   list-style-type: none;
 }
+.text-black {
+  color: #161614;
+}
 .button-share {
   border-radius: 2px;
-  background-color: #EE6723;
+  background-color: #FDA458;
   box-shadow: 0 0 4px 0 #2f333a;
   border: 0;
-  margin: 30px;
+  margin: 30px 30px 30px 0;
   padding: 10px 20px 10px 20px;
 }
 a:focus {
@@ -73,12 +78,10 @@ input::-moz-focus-inner {
 }
 
 .center-popup {
-  padding: 40px;
   background: #161614;
   z-index: 4;
-  margin: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  transform: translate(0, 50%);
+  transform: translate(0, 30%);
 }
 .form-popup {
   display: none;
@@ -88,26 +91,25 @@ input::-moz-focus-inner {
   z-index: 2;
   position: absolute;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background: #EE6723;
+  background: #FDA458;
 }
 .cancel-button {
-  border: 0;
+  border: 1px #999 solid;
   float: right;
-  color: #EE6723;
+  color: #FDA458;
 }
-.form-black-part {
-  background: #161614;
-  width: 40%;
-}
-.white-form-part {
+.white-part-popup {
   background: white;
-  width: 60%;
+  padding: 45px;
   height: 100%;
 }
-
-form input {
-  width: 50%;
+.black-part-popup {
+  padding: 45px;
 }
+.popup-text {
+  margin: 30px 0 15px 0;
+}
+
 
 @font-face {
   font-family: 'fontello';
@@ -120,39 +122,79 @@ form input {
   font-style: normal;
     }
 
-.minus-icon
-  {
-    font-family: "fontello";
-    font-style: normal;
-    font-weight: normal;
-    speak: none;
-    color: #EE6723;
+.minus-icon {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  color: #FDA458;
 
-    display: inline-block;
-    text-decoration: inherit;
-    width: 1em;
-    margin-right: .2em;
-    text-align: center;
-    /* opacity: .8; */
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
 
-    /* For safety - reset parent styles, that can break glyph codes*/
-    font-variant: normal;
-    text-transform: none;
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
 
-    /* fix buttons height, for twitter bootstrap */
-    line-height: 1em;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
 
-    /* Animation center compensation - margins should be symmetric */
-    /* remove if not needed */
-    margin-left: .2em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
 
-    /* You can be more comfortable with increased icons size */
-    /* font-size: 120%; */
+  /* You can be more comfortable with increased icons size */
+  /* font-size: 120%; */
 
-    /* Font smoothing. That was taken from TWBS */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-    /* Uncomment for 3D effect */
-     text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);
+  /* Uncomment for 3D effect */
+   text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);
+}
+
+.set-container-middle {
+  transform: translate(0, 50%);
+}
+form input, textarea {
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  width: 100%;
+  background: white;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #828282;
+}
+
+.form-send-button {
+  position: absolute;
+  border: 0;
+  outline: 0;
+  color: #FDA458;
+  float: right;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: url('mobile.png');
+    font-size: 18px;
+  }
+  .set-container-middle {
+   transform: translate(0, 30%);
+  }
+  form input, textarea {
+    width: 100%;
+  }
+  .mobile-invisible {
+    display: none;
+  }
+  .center-popup {
+    transform: translate(0, 0);
+    margin: 20px 0 20px 0;
+  }
 }

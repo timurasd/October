@@ -4,9 +4,13 @@
   <meta charset="UTF-8">
   <title>October – Агентство</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"
+  >
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="static/styles.css">
+  <link rel="stylesheet" href="../static/styles.css">
   <script>
     $('#show-form').click(function () {
       if (!$(this).hasClass('open')) {
@@ -26,72 +30,95 @@
   <div class="form-popup" id="myForm">
     <div class="container">
       <div class="center-popup">
-
-        <button type="button" class="cancel-button" onclick="closeForm()">x</button>
         <div class="row">
-          <div class="col-md-5">
-            <h1>October</h1>
-            <div>ПРОЕКТНОЕ БЮРО</div>
-            <div>ПОЛНОГО ЦИКЛА</div><br><br>
-
-            <div>8 (915) 383-61-48</div>
-            <div>hello@october.ai</div><br><br>
-
-            <div>2015. Москва</div>
+          <div class="col-md-5 ">
+            <div class="black-part-popup">
+              <a href="">
+                <img src="../static/logo_october.png" style="width: 300px" alt="October Agency Logotype">
+              </a>
+              <div class="popup-text">ПРОЕКТНОЕ БЮРО <p>ПОЛНОГО ЦИКЛА</div>
+              <div class="popup-text h4">8 (915) 383-61-48</div>
+              <div class="popup-text">hello@october.ai</div>
+              <div class="popup-text mobile-invisible">2015-2019 &copy Москва</div>
+            </div>
           </div>
-          <div class="col-md-7">
-            <form  action="//formspree.io/you@email.com">
-              <p><input type="text" name="Имя" required placeholder="Имя" /></p>
-              <p><input type="email" name="_replyto"required placeholder="Email" /></p>
-              <p><textarea name="Сообщение" required placeholder="Ваше сообщение" rows="7"></textarea></p>
-              <p><input type="submit" value="Отправить" />
-              <input type="hidden" name="_next" value="/thanks.html" />
-              <input type="hidden" name="_subject" value="Сообщение с моего сайта" />
-            </form>
+          <div class="col-md-7 ">
+            <div class="white-part-popup">
+
+              <div class="row mb-4">
+                <div class="col-md-8 text-black">
+                  <strong>НАПИШИТЕ НАМ</strong>
+                </div>
+                <div class="col-md-4">
+                  <button type="button" class="cancel-button" onclick="closeForm()">x</button>
+                </div>
+              </div>
+
+
+                <form name="contactform" method="post" action="send_form_email.php">
+                  <div class="row mb-2">
+                    <div class="col-md-6">
+                      <small class="text-muted d-block ml-2">Ваше имя</small>
+                      <input type="text" class="d-block" name="name" required />
+                    </div>
+                    <div class="col-md-6">
+                      <small class="text-muted d-block ml-2">Ваш телефон</small>
+                      <input class="d-block" type="text" name="number"/>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <small class="text-muted d-block ml-2">Ваш email</small>
+                      <input type="email" class="d-block mb-2" name="email" required />
+                      <small class="text-muted d-block ml-2">Ваш сообщение</small>
+                      <textarea name="comments" required class="mb-3" rows="3"></textarea>
+                      <input type="hidden" name="_next" value="/thanks.html" />
+                      <input type="hidden"  name="_subject" value="Сообщение с моего сайта" />
+                      <input type="submit" class="form-send-button" value="ОТПРАВИТЬ"/>
+                    </div>
+                  </div>
+                </form>
+
+            </div>
           </div>
+
         </div>
-
       </div>
     </div>
   </div>
 
   <div class="container">
-    <div style="transform: translate(0, 50%);">
-      <div id="header">
-        <h1><b>October</b></h1>
-      </div>
+    <div class="set-container-middle">
+       <a href="">
+          <img src="../static/logo_october.png" style="width: 300px" alt="October Agency Logotype">
+       </a>
       <div id="body">
 
         <div class="row">
-          <ul>
-            <li><i class="minus-icon icon-minus">&#xe800;</i> Маркетинг</li>
-            <li><i class="minus-icon icon-minus">&#xe800;</i> Разработка моб. приложений</li>
-            <li><i class="minus-icon icon-minus">&#xe800;</i> Research & Development</li>
-          </ul>
-        </div>
-        <div class="row">
-          <div class="col-md-5">
+          <div class="col-md-6">
+<!--            <div><i class="minus-icon icon-minus">&#xe800;</i> Маркетинг</div>-->
+<!--            <div><i class="minus-icon icon-minus">&#xe800;</i> Разработка моб. приложений</div>-->
+<!--            <div><i class="minus-icon icon-minus">&#xe800;</i> Research & Development</div>-->
+            <div class="mt-2">
               Пока готовим перезапуск сайта, мы продолжаем заниматься дизайном и маркетингом,
               разрабатывать мобильные приложение и скоро откроем занавес с ногово R&D отдела.
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <button class="button-share open-button" onclick="openForm()">Напишите нам</button>
+            </div>
+            <button class="button-share open-button" onclick="openForm()">
+              Расказать о проекте
+            </button>
           </div>
         </div>
 
       </div>
     </div>
 
-
     <div id="footer" class="d-flex justify-content-between">
 <!--      d-flex justify-content-center-->
 
-      <div class="row">
+      <div class="ml-2">
         <div>hello@october.ai</div>
       </div>
-      <div class="row">
+      <div class="pr-4">
         <div>2015-2019 &copy Москва</div>
       </div>
     </div>
