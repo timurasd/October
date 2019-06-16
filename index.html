@@ -71,7 +71,7 @@
               </div>
 
 
-                <form name="contactform" method="post" action="public/send_form_email.php">
+                <form method="post" action="public/send_form_email.php">
                   <div class="row mb-2">
                     <div class="col-md-6">
                       <small class="text-muted d-block ml-2">Ваше имя</small>
@@ -87,9 +87,7 @@
                       <small class="text-muted d-block ml-2">Ваш email</small>
                       <input type="email" class="d-block mb-2" name="email" required />
                       <small class="text-muted d-block ml-2">Ваш сообщение</small>
-                      <textarea name="comments" required class="mb-3" rows="3"></textarea>
-                      <input type="hidden" name="_next" value="/thanks.html" />
-                      <input type="hidden"  name="_subject" value="Сообщение с моего сайта" />
+                      <textarea name="message" required class="mb-3" rows="3"></textarea>
                       <input type="submit" class="form-send-button" value="ОТПРАВИТЬ"/>
                     </div>
                   </div>
