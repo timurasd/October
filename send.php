@@ -19,6 +19,6 @@
     if($sending) echo '<script language="JavaScript" type="text/javascript">
 						function changeurl(){eval(self.location="https://october.ai/");}
 						window.setTimeout("changeurl();",3000);
-						</script> <div style="text-align: center; font-size: 25px; margin-top: 50px;">Спасибо Ваша завка принята,<br> Мы свяжемся с Вами в близжайшее время </div>';
+						</script> <div style="text-align: center; font-size: 25px; margin-top: 50px;">Спасибо! Ваша заявка принята,<br> Мы свяжемся с Вами в ближайшее время </div>';
 
     ?>
