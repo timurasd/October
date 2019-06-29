@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+      <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>October – Агентство</title>
   <link rel="apple-touch-icon" sizes="57x57" href="static/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="static/favicon/apple-icon-60x60.png">
@@ -30,7 +31,7 @@
   <script>
     $('#show-form').click(function () {
       if (!$(this).hasClass('open')) {
-        $('.center-pop-up').css('display','block')
+        $('.center-pop-up').fadeIn(1000)
         $(this).addClass('open');
         $(this).text('CLOSE FORM');
       }
@@ -46,6 +47,10 @@
   <div class="form-popup" id="myForm">
     <div class="container">
       <div class="center-popup">
+        <div class="form__top">
+          <span>Контакты</span>
+          <button type="button" class="cancel-button" onclick="closeForm()">x</button>
+        </div>
         <div class="row">
           <div class="col-md-5 ">
             <div class="black-part-popup">
@@ -65,12 +70,11 @@
                   <strong>НАПИШИТЕ НАМ</strong>
                 </div>
                 <div class="col-md-4">
-                  <button type="button" class="cancel-button" onclick="closeForm()">x</button>
                 </div>
               </div>
 
 
-                <form name="contactform" method="post" action="public/send_form_email.php">
+                <form name="contactform" method="post" action="send.php">
                   <div class="row mb-2">
                     <div class="col-md-6">
                       <small class="text-muted d-block ml-2">Ваше имя</small>
@@ -105,15 +109,17 @@
   <div class="container">
     <div class="set-container-middle">
        <a href="">
-          <img src="static/logo_october.png" style="width: 300px" alt="October Agency Logotype">
+          <img class="logo" src="static/logo_october.png" style="width: 300px" alt="October Agency Logotype">
        </a>
       <div id="body">
 
         <div class="row">
           <div class="col-md-6">
-<!--            <div><i class="minus-icon icon-minus">&#xe800;</i> Маркетинг</div>-->
-<!--            <div><i class="minus-icon icon-minus">&#xe800;</i> Разработка моб. приложений</div>-->
-<!--            <div><i class="minus-icon icon-minus">&#xe800;</i> Research & Development</div>-->
+           <div class="mobile__block">
+             <div><i class="minus-icon icon-minus">&#xe800;</i> Маркетинг</div>
+            <div><i class="minus-icon icon-minus">&#xe800;</i> Разработка моб. приложений</div>
+            <div><i class="minus-icon icon-minus">&#xe800;</i> Research & Development</div>
+           </div>
             <div class="mt-2">
               Пока готовим перезапуск сайта, мы продолжаем заниматься дизайном и маркетингом,
               разрабатывать мобильные приложения и скоро откроем занавес с ногово R&D отдела.
@@ -128,7 +134,6 @@
     </div>
 
     <div id="footer" class="d-flex justify-content-between">
-<!--      d-flex justify-content-center-->
 
       <div class="ml-2">
         <div>hello@october.ai</div>
@@ -143,11 +148,11 @@
 
   <script>
     function openForm() {
-      document.getElementById("myForm").style.display = "block";
+      $('#myForm').fadeIn(600)
     }
 
     function closeForm() {
-      document.getElementById("myForm").style.display = "none";
+      $('#myForm').fadeOut(600)
     }
   </script>
 </body>
