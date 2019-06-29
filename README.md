@@ -1,2 +1,2 @@
 # October
-October web site
+October web site.
